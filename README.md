@@ -3,7 +3,7 @@ GraniteCoin [X11]
 
 Copyright (c) 2014 GraniteCoin Developers
 
-What is GraniteCoin [GCN]?
+What is GraniteCoin [GRN]?
 ----------------
 
 GraniteCoin is a crypto-currency that is using the X11 Algorithm for Anti ASIC, energy efficient, CPU and GPU mining with Digishield.
