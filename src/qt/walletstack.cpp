@@ -7,6 +7,7 @@
 #include "walletstack.h"
 #include "walletview.h"
 #include "bitcoingui.h"
+#include "rpcchatwindow.h"
 
 #include <QMap>
 #include <QMessageBox>
@@ -108,6 +109,13 @@ void WalletStack::gotoSendCoinsPage(QString addr)
     QMap<QString, WalletView*>::const_iterator i;
     for (i = mapWalletViews.constBegin(); i != mapWalletViews.constEnd(); ++i)
         i.value()->gotoSendCoinsPage(addr);
+}
+
+void WalletStack::gotoRpcChatPage()
+{
+    QMap<QString, WalletView*>::const_iterator i;
+    for (i = mapWalletViews.constBegin(); i != mapWalletViews.constEnd(); ++i)
+        i.value()->gotoRpcChatPage();
 }
 
 void WalletStack::gotoSignMessageTab(QString addr)
