@@ -8,6 +8,7 @@
 #include "bitcoingui.h"
 #include "walletstack.h"
 #include "walletview.h"
+#include "rpcchatwindow.h"
 
 #include <QHBoxLayout>
 #include <QMessageBox>
@@ -103,6 +104,11 @@ void WalletFrame::gotoReceiveCoinsPage()
 void WalletFrame::gotoSendCoinsPage(QString addr)
 {
     walletStack->gotoSendCoinsPage(addr);
+}
+
+void WalletFrame::gotoRpcChatPage()
+{
+    walletStack->gotoRpcChatPage();
 }
 
 void WalletFrame::gotoSignMessageTab(QString addr)
