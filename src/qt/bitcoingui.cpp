@@ -17,6 +17,7 @@
 #include "walletframe.h"
 #include "optionsmodel.h"
 #include "transactiondescdialog.h"
+#include "rpcchatwindow.h"
 #include "bitcoinunits.h"
 #include "guiconstants.h"
 #include "notificator.h"
@@ -172,6 +173,11 @@ void BitcoinGUI::createActions()
     overviewAction->setCheckable(true);
     overviewAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_1));
     tabGroup->addAction(overviewAction);
+	
+	rpcChatAction = new QAction(QIcon(":/icons/social"), tr("&Social/Exchange"), this);
+    rpcChatAction->setToolTip(tr("View chat, links to social media and exchanges"));
+    rpcChatAction->setCheckable(true);
+    tabGroup->addAction(rpcChatAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
     sendCoinsAction->setStatusTip(tr("Send coins to a GraniteCoin address"));
@@ -205,6 +211,7 @@ void BitcoinGUI::createActions()
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(gotoOverviewPage()));
     connect(sendCoinsAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(sendCoinsAction, SIGNAL(triggered()), this, SLOT(gotoSendCoinsPage()));
+	connect(rpcChatAction, SIGNAL(triggered()), this, SLOT(gotoRpcChatPage()));
     connect(receiveCoinsAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(receiveCoinsAction, SIGNAL(triggered()), this, SLOT(gotoReceiveCoinsPage()));
     connect(historyAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
@@ -291,6 +298,7 @@ void BitcoinGUI::createToolBars()
     QToolBar *toolbar = addToolBar(tr("Tabs toolbar"));
     toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     toolbar->addAction(overviewAction);
+	toolbar->addAction(rpcChatAction);
     toolbar->addAction(sendCoinsAction);
     toolbar->addAction(receiveCoinsAction);
     toolbar->addAction(historyAction);
@@ -496,6 +504,12 @@ void BitcoinGUI::gotoSendCoinsPage(QString addr)
 {
     if (walletFrame) walletFrame->gotoSendCoinsPage(addr);
 }
+
+void BitcoinGUI::gotoRpcChatPage()
+{
+	if (walletFrame) walletFrame->gotoRpcChatPage();
+}
+
 
 void BitcoinGUI::gotoSignMessageTab(QString addr)
 {

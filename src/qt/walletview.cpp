@@ -15,6 +15,7 @@
 #include "optionsmodel.h"
 #include "transactionview.h"
 #include "overviewpage.h"
+#include "rpcchatwindow.h"
 #include "askpassphrasedialog.h"
 #include "ui_interface.h"
 
@@ -58,6 +59,8 @@ WalletView::WalletView(QWidget *parent, BitcoinGUI *_gui):
     receiveCoinsPage = new AddressBookPage(AddressBookPage::ForEditing, AddressBookPage::ReceivingTab);
 
     sendCoinsPage = new SendCoinsDialog(gui);
+	
+	rpcChatWindow = new RpcChatWindow(this);
 
     signVerifyMessageDialog = new SignVerifyMessageDialog(gui);
 
@@ -66,6 +69,7 @@ WalletView::WalletView(QWidget *parent, BitcoinGUI *_gui):
     addWidget(addressBookPage);
     addWidget(receiveCoinsPage);
     addWidget(sendCoinsPage);
+	addWidget(rpcChatWindow);
 
     // Clicking on a transaction on the overview page simply sends you to transaction history page
     connect(overviewPage, SIGNAL(transactionClicked(QModelIndex)), this, SLOT(gotoHistoryPage()));
@@ -120,6 +124,7 @@ void WalletView::setWalletModel(WalletModel *walletModel)
         addressBookPage->setModel(walletModel->getAddressTableModel());
         receiveCoinsPage->setModel(walletModel->getAddressTableModel());
         sendCoinsPage->setModel(walletModel);
+		rpcChatWindow->setModel(clientModel);
         signVerifyMessageDialog->setModel(walletModel);
 
         setEncryptionStatus();
@@ -181,6 +186,12 @@ void WalletView::gotoSendCoinsPage(QString addr)
 
     if (!addr.isEmpty())
         sendCoinsPage->setAddress(addr);
+}
+
+void WalletView::gotoRpcChatPage()
+{
+    gui->getRpcChatAction()->setChecked(true);
+    setCurrentWidget(rpcChatWindow);
 }
 
 void WalletView::gotoSignMessageTab(QString addr)
