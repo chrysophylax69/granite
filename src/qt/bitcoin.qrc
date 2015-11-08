@@ -48,7 +48,7 @@
         <file alias="bittrex">res/icons/bittrex.png</file>
         <file alias="poloniex">res/icons/poloniex.png</file>
         <file alias="bleutrade">res/icons/bleutrade.png</file>
-		<file alias="kingcoiny">res/icons/kingcoiny.png</file>
+		<file alias="cryptsy">res/icons/cryptsy.png</file>
         <file alias="social">res/icons/social.png</file>
     </qresource>
     <qresource prefix="/images">
