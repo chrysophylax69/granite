@@ -60,7 +60,7 @@ void Server::connected()
 
 void Server::joins()
 {
-    join("#granite");
+    join("##granite");
 }
 
 void Server::readServer()
