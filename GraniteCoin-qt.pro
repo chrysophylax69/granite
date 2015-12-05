@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = GraniteCoin-Qt
+TARGET = granite-qt
 VERSION = 1.0.1
 INCLUDEPATH += src src/json src/qt
 QT += network
