@@ -1,7 +1,7 @@
 granite [X11]
 ================================
 
-Copyright (c) 2014 , 2015 granite Developers
+Copyright (c) 2014 , 2015 , 2016 granite Developers
 
 What is granite [GRN]?
 ----------------
