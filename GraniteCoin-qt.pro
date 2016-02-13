@@ -1,6 +1,6 @@
 TEMPLATE = app
-TARGET = GraniteCoin-Qt
-VERSION = 1.0.1
+TARGET = granite-qt
+VERSION = 1.0.2.0
 INCLUDEPATH += src src/json src/qt
 QT += network
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE BOOST_THREAD_PROVIDES_GENERIC_SHARED_MUTEX_ON_WIN __NO_SYSTEM_INCLUDES
@@ -354,7 +354,7 @@ FORMS += src/qt/forms/qrcodedialog.ui
 
 
 # Todo: Remove this line when switching to Qt5, as that option was removed
-CODECFORTR = UTF-8
+# CODECFORTR = UTF-8
 
 # for lrelease/lupdate
 # also add new translations to src/qt/bitcoin.qrc under translations/
