@@ -1195,6 +1195,10 @@ static const char *strMainNetDNSSeed[][2] = {
 	{"seednode1.granitecoin.com", "seednode1.granitecoin.com"},
 	{"seednode2.granitecoin.com", "seednode2.granitecoin.com"},
 	{"seednode3.granitecoin.com", "seednode3.granitecoin.com"},
+	{"seednode4.granitecoin.com", "seednode4.granitecoin.com"},
+	{"seednode5.granitecoin.com", "seednode5.granitecoin.com"},
+	{"seednode6.granitecoin.com", "seednode6.granitecoin.com"},
+	{"seednode7.granitecoin.com", "seednode7.granitecoin.com"},
     {NULL, NULL}
 
 };
