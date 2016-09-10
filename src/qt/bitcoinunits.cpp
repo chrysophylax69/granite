@@ -45,9 +45,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("GraniteCoins");
-    case mBTC: return QString("Milli-GraniteCoins (1 / 1,000)");
-    case uBTC: return QString("Micro-GraniteCoins (1 / 1,000,000)");
+    case BTC: return QString("granites");
+    case mBTC: return QString("Milli-granites (1 / 1,000)");
+    case uBTC: return QString("Micro-granites (1 / 1,000,000)");
     default: return QString("???");
     }
 }

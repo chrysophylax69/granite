@@ -59,6 +59,7 @@
       <attribute name="title">
        <string>Tab 1</string>
       </attribute>
+      <zorder>hide3</zorder>
      </widget>
      <widget class="QWidget" name="tab_5">
       <attribute name="title">
@@ -147,11 +148,13 @@
        <widget class="QLabel" name="label_9">
         <property name="font">
          <font>
-          <family>Open Sans,sans-serif</family>
+          <family>Sans Serif</family>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="text">
-         <string>Granite IRC Chat</string>
+         <string>granite IRC Chat</string>
         </property>
        </widget>
       </item>
@@ -228,7 +231,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Nickname</string>
+      <string>Nickname:</string>
      </property>
     </widget>
     <widget class="QPushButton" name="buttonConnect">
@@ -250,14 +253,25 @@
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>140</x>
+       <x>40</x>
        <y>60</y>
-       <width>121</width>
-       <height>16</height>
+       <width>271</width>
+       <height>20</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connect to IRC:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Connect to ChainWorks Industries IRC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_4">
@@ -309,7 +323,9 @@
        <widget class="QLabel" name="label_11">
         <property name="font">
          <font>
-          <family>Open Sans,sans-serif</family>
+          <family>Sans Serif</family>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="text">
@@ -349,7 +365,9 @@
        <widget class="QLabel" name="label_12">
         <property name="font">
          <font>
-          <family>Open Sans,sans-serif</family>
+          <family>Sans Serif</family>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="text">
@@ -372,49 +390,17 @@
       </item>
      </layout>
     </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>-30</x>
-       <y>340</y>
-       <width>161</width>
-       <height>101</height>
-      </rect>
-     </property>
-     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://bittrex.com/Market/Index?MarketName=BTC-GRN; style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;&lt;img src=&quot;:/icons/bittrex&quot;/&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="openExternalLinks">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_13">
-     <property name="geometry">
-      <rect>
-       <x>60</x>
-       <y>340</y>
-       <width>171</width>
-       <height>101</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=https://poloniex.com/coinRequest style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;&lt;img src=&quot;:/icons/poloniex&quot;/&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="openExternalLinks">
-      <bool>true</bool>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_14">
      <property name="geometry">
       <rect>
-       <x>190</x>
+       <x>20</x>
        <y>340</y>
-       <width>161</width>
+       <width>191</width>
        <height>101</height>
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=https://bleutrade.com/exchange/GRN/BTC style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;&lt;img src=&quot;:/icons/bleutrade&quot;/&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://bleutrade.com/exchange/GRN/BTC&quot; style=&quot;text-decoration: underline; color:#0000ff;&quot;&gt;&lt;img src=&quot;:/icons/bleutrade&quot;/&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="openExternalLinks">
       <bool>true</bool>
@@ -442,14 +428,17 @@
     <widget class="QLabel" name="label_15">
      <property name="geometry">
       <rect>
-       <x>330</x>
+       <x>240</x>
        <y>340</y>
-       <width>161</width>
+       <width>181</width>
        <height>101</height>
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=https://www.cryptsy.com style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;&lt;img src=&quot;:/icons/cryptsy&quot;/&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.cryptopia.co.nz/Exchange?market=GRN_BTC&quot; style=&quot;text-decoration: underline; color:#0000ff;&quot;&gt;&lt;img src=&quot;:/icons/cryptopia&quot;/&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="../bitcoin.qrc">:/icons/cryptopia</pixmap>
      </property>
      <property name="openExternalLinks">
       <bool>true</bool>
@@ -472,6 +461,8 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="../bitcoin.qrc"/>
+ </resources>
  <connections/>
 </ui>

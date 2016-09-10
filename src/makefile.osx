@@ -129,7 +129,7 @@ ifneq (${USE_IPV6}, -)
 	DEFS += -DUSE_IPV6=$(USE_IPV6)
 endif
 
-all: GraniteCoind
+all: granited
 
 #
 # LevelDB support
@@ -162,11 +162,11 @@ obj/%.o: %.c
 	      -e '/^$$/ d' -e 's/$$/ :/' < $(@:%.o=%.d) >> $(@:%.o=%.P); \
 	  rm -f $(@:%.o=%.d)
 
-GraniteCoind: $(OBJS:obj/%=obj/%)
+granited: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 clean:
-	-rm -f GraniteCoind
+	-rm -f granited
 	-rm -f obj/*.o
 	-rm -f obj/*.P
 	-rm -f obj/build.h

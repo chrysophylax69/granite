@@ -3,7 +3,7 @@
 <plist version="0.9">
 <dict>
 	<key>CFBundleIconFile</key>
-	<string>GraniteCoin.icns</string>
+	<string>granite.icns</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleGetInfoString</key>
@@ -15,19 +15,19 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleExecutable</key>
-	<string>GraniteCoin-Qt</string>
+	<string>granite-Qt</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.GraniteCoin.GraniteCoin-Qt</string>
+	<string>org.granite.granite-Qt</string>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>org.GraniteCoin.GraniteCoinPayment</string>
+            <string>org.granite.granitePayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
-              <string>GraniteCoin</string>
+              <string>granite</string>
             </array>
           </dict>
         </array>

@@ -155,7 +155,7 @@
          <item>
           <widget class="QPushButton" name="signMessageButton_SM">
            <property name="toolTip">
-            <string>Sign the message to prove you own this GraniteCoin address</string>
+            <string>Sign the message to prove you own this granite address</string>
            </property>
            <property name="text">
             <string>Sign &amp;Message</string>
@@ -261,7 +261,7 @@
          <item>
           <widget class="QValidatedLineEdit" name="addressIn_VM">
            <property name="toolTip">
-            <string>The address the message was signed with (e.g. H7QEPyCg1Yv3UZUALDha9bNYXuYbfMe9Lp)</string>
+            <string>The address the message was signed with (e.g. G76EPyCg1Yv3UZUALDha9bNYXuYbfMe9Lp)</string>
            </property>
            <property name="maxLength">
             <number>34</number>
@@ -301,7 +301,7 @@
          <item>
           <widget class="QPushButton" name="verifyMessageButton_VM">
            <property name="toolTip">
-            <string>Verify the message to ensure it was signed with the specified GraniteCoin address</string>
+            <string>Verify the message to ensure it was signed with the specified granite address</string>
            </property>
            <property name="text">
             <string>Verify &amp;Message</string>

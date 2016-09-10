@@ -112,7 +112,7 @@ OBJS= \
     obj/simd.o \
 	obj/checkpointsync.o
 
-all: GraniteCoind.exe
+all: granited.exe
 
 #
 # LevelDB support
@@ -129,11 +129,11 @@ obj/%.o: %.cpp $(HEADERS)
 obj/%.o: %.c $(HEADERS)
 	$(CXX) -c $(CFLAGS) -fpermissive -o $@ $<
 	
-GraniteCoind.exe: $(OBJS:obj/%=obj/%)
+granited.exe: $(OBJS:obj/%=obj/%)
 	$(CXX) $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 clean:
-	rm -f GraniteCoind.exe
+	rm -f granited.exe
 	rm -f obj/*
 	cd leveldb && $(MAKE) TARGET_OS=NATIVE_WINDOWS clean && cd ..
 
