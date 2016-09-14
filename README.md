@@ -6,7 +6,7 @@ Copyright (c) 2014 , 2015 , 2016 granite Developers
 What is granite [GRN]?
 ----------------
 
-granite is a crypto-currency that is using the X11 Algorithm for Anti ASIC, energy efficient, CPU and GPU mining utilizing Digishield block difficulty retargeting.
+granite is a crypto-currency that is using the X11 Algorithm for energy efficient, CPU and GPU mining utilizing Digishield block difficulty retargeting.
 
  - 2 minute block targets
  - 65 million total coins
@@ -14,7 +14,7 @@ granite is a crypto-currency that is using the X11 Algorithm for Anti ASIC, ener
  - 10x 100,000 coin Bonus blocks!!
  - Digishield for retargeting difficulty & to stop Multi-pool mining 
 
-v1.0.2.0 Release
+v1.3.0.0 Release
 
 License
 -------
