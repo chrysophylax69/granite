@@ -1192,19 +1192,19 @@ void MapPort(bool)
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strMainNetDNSSeed[][2] = {
-	{"seednode1.granitecoin.com", "seednode1.granitecoin.com"},
-	{"seednode2.granitecoin.com", "seednode2.granitecoin.com"},
-	{"seednode3.granitecoin.com", "seednode3.granitecoin.com"},
-	{"seednode4.granitecoin.com", "seednode4.granitecoin.com"},
-	{"seednode5.granitecoin.com", "seednode5.granitecoin.com"},
-	{"seednode6.granitecoin.com", "seednode6.granitecoin.com"},
-	{"seednode7.granitecoin.com", "seednode7.granitecoin.com"},
+	{"grn-seed01.chainworksindustries.com", "grn-seed01.chainworksindustries.com"},
+	{"grn-seed02.chainworksindustries.com", "grn-seed02.chainworksindustries.com"},
+	{"grn-seed03.chainworksindustries.com", "grn-seed03.chainworksindustries.com"},
+	{"grn-seed04.chainworksindustries.com", "grn-seed04.chainworksindustries.com"},
+	{"grn-seed05.chainworksindustries.com", "grn-seed05.chainworksindustries.com"},
+	{"grn-seed06.chainworksindustries.com", "grn-seed06.chainworksindustries.com"},
+	{"grn-seed07.chainworksindustries.com", "grn-seed07.chainworksindustries.com"},
     {NULL, NULL}
 
 };
 
 static const char *strTestNetDNSSeed[][2] = {
-    {"testnode1.granitecoin.com", "testnode1.granitecoin.com"},
+    {"grn-testseed01.chainworksindustries.com", "grn-testseed01.chainworksindustries.com"},
     {NULL, NULL}
 };
 
@@ -1227,7 +1227,7 @@ void ThreadDNSAddressSeed()
                 BOOST_FOREACH(CNetAddr& ip, vaddr)
                 {
                     int nOneDay = 24*3600;
-                    CAddress addr = CAddress(CService(ip, GetDefaultPort()));
+                    CAddress addr = CAddress(CService(ip, GetDefaultPort()))
                     addr.nTime = GetTime() - 3*nOneDay - GetRand(4*nOneDay); // use a random age between 3 and 7 days old
                     vAdd.push_back(addr);
                     found++;
